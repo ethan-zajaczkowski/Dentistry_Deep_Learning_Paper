@@ -1,0 +1,196 @@
+
+    <html>
+    <head>
+        <title>Recessions Data Summary</title>
+        <style>
+            body { font-family: Arial, sans-serif; margin: 0; padding: 0; width: 100%; }
+            .container { width: 85%; margin: 0 auto; }
+            table { width: 100%; border-collapse: collapse; }
+            th, td { border: 2px solid #333333; padding: 8px; text-align: left; }
+            th { font-weight: bold; background-color: #f0f0f0; }
+            td:first-child, th:first-child { width: 15%; }
+            td:nth-child(2), th:nth-child(2) { width: 85%; }
+            h1 {
+                font-size: 36px; /* Larger font size for the main title */
+                font-weight: bold;
+                text-align: center; /* Center the main title */
+                margin-top: 20px; /* Add some margin at the top */
+                text-decoration: underline; /* Add underline to the main title */
+                color: #333333; /* Dark color for the main title */
+            }
+            h2 { font-size: 24px; font-weight: bold; margin-bottom: 5px; color: #333333; }
+            p { font-style: italic; margin-top: 0px; color: #666666; }
+        </style>
+    </head>
+    <body>
+    <h1>Teeth Recessions Data Summary</h1><div class='container'><h2>Datatype 1: No Missing Data</h2><p>These patients have complete records with no missing data across all teeth.</p><table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+    </tr>
+  </thead>
+  <tbody>
+  </tbody>
+</table></div><br><div class='container'><h2>Datatype 2: Consistent Missing Teeth Data</h2><p>Patients with consistent missing data across multiple visits for specific teeth.</p><table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th>ResearchID</th>
+      <th>Reported Issues</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>17</td>
+      <td>2015-04-09 - Missing: (Tooth 14 B, Tooth 14 P)<br>2017-11-23 - Missing: (Tooth 14 B, Tooth 14 P)</td>
+    </tr>
+    <tr>
+      <td>27</td>
+      <td>2019-05-14 - Missing: (Tooth 18 B, Tooth 18 P, Tooth 28 B, Tooth 28 P)<br>2020-07-09 - Missing: (Tooth 18 B, Tooth 18 P, Tooth 28 B, Tooth 28 P)<br>2021-12-10 - Missing: (Tooth 18 B, Tooth 18 P, Tooth 28 B, Tooth 28 P)</td>
+    </tr>
+    <tr>
+      <td>30</td>
+      <td>2017-08-08 - Missing: (Tooth 18 B, Tooth 18 P, Tooth 17 B, Tooth 17 P, Tooth 21 B, Tooth 21 P, Tooth 28 B, Tooth 28 P)<br>2017-10-10 - Missing: (Tooth 18 B, Tooth 18 P, Tooth 17 B, Tooth 17 P, Tooth 21 B, Tooth 21 P, Tooth 28 B, Tooth 28 P)</td>
+    </tr>
+  </tbody>
+</table></div><br><div class='container'><h2>Datatype 3: Single Observation ResearchIDs</h2><p>Patients who only have one visit on record, limiting insights on data consistency.</p><table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th>ResearchID</th>
+      <th>Reported Issues</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>43</td>
+      <td>2021-11-29 - Missing: (Tooth 18 B, Tooth 18 P, Tooth 17 P, Tooth 16 P, Tooth 15 P, Tooth 14 P, Tooth 13 B, Tooth 13 P, Tooth 12 B, Tooth 12 P, Tooth 11 B, Tooth 11 P, Tooth 21 B, Tooth 21 P, Tooth 22 B, Tooth 22 P, Tooth 23 B, Tooth 23 P, Tooth 24 P, Tooth 25 P, Tooth 26 P, Tooth 27 P, Tooth 28 B, Tooth 28 P)</td>
+    </tr>
+  </tbody>
+</table></div><br><div class='container'><h2>Datatype 4: Integer-Type Missing Data</h2><p>These records contain systematic errors where integer values are missing or improperly formatted.</p><table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th>ResearchID</th>
+      <th>Reported Issues</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>1</td>
+      <td>2015-04-29 - Missing: (Tooth 18 B, Tooth 18 P, Tooth 17 B, Tooth 17 P, Tooth 16 B, Tooth 16 P, Tooth 15 B, Tooth 15 P, Tooth 14 B, Tooth 14 P, Tooth 13 P, Tooth 12 B, Tooth 12 P, Tooth 11 B, Tooth 11 P, Tooth 21 B, Tooth 21 P, Tooth 22 B, Tooth 22 P, Tooth 23 B, Tooth 23 P, Tooth 24 B, Tooth 24 P, Tooth 25 B, Tooth 25 P, Tooth 26 B, Tooth 26 P, Tooth 27 B, Tooth 27 P, Tooth 28 B, Tooth 28 P)<br> ---> Missing Integer Values: (Tooth 13 B)<br></td>
+    </tr>
+    <tr>
+      <td>2</td>
+      <td>2018-03-13 - Missing: (Tooth 18 B, Tooth 18 P, Tooth 28 B, Tooth 28 P)<br> ---> Missing Integer Values: (Tooth 17 B, Tooth 17 P, Tooth 16 B, Tooth 16 P, Tooth 15 B, Tooth 15 P, Tooth 14 B, Tooth 14 P, Tooth 13 B, Tooth 13 P, Tooth 12 B, Tooth 12 P, Tooth 11 B, Tooth 11 P, Tooth 21 B, Tooth 21 P, Tooth 22 B, Tooth 22 P, Tooth 23 B, Tooth 23 P, Tooth 24 B, Tooth 24 P, Tooth 25 B, Tooth 25 P, Tooth 26 B, Tooth 26 P, Tooth 27 B, Tooth 27 P)<br><br>2018-09-18 - Missing: (Tooth 18 B, Tooth 18 P, Tooth 28 B, Tooth 28 P)<br> ---> Missing Integer Values: (Tooth 17 B, Tooth 17 P, Tooth 16 B, Tooth 16 P, Tooth 15 B, Tooth 15 P, Tooth 14 B, Tooth 14 P, Tooth 13 B, Tooth 13 P, Tooth 12 B, Tooth 12 P, Tooth 11 B, Tooth 11 P, Tooth 21 B, Tooth 21 P, Tooth 22 B, Tooth 22 P, Tooth 23 B, Tooth 23 P, Tooth 24 B, Tooth 24 P, Tooth 25 B, Tooth 25 P, Tooth 26 B, Tooth 26 P, Tooth 27 B, Tooth 27 P)<br></td>
+    </tr>
+    <tr>
+      <td>3</td>
+      <td>2013-02-01 - Missing: (Tooth 18 B, Tooth 18 P, Tooth 17 P, Tooth 16 P, Tooth 15 P, Tooth 14 P, Tooth 13 B, Tooth 13 P, Tooth 12 B, Tooth 12 P, Tooth 11 B, Tooth 11 P, Tooth 21 B, Tooth 21 P, Tooth 22 B, Tooth 22 P, Tooth 23 B, Tooth 23 P, Tooth 24 P, Tooth 25 P, Tooth 26 P, Tooth 27 B, Tooth 27 P, Tooth 28 B, Tooth 28 P)<br> ---> Missing Integer Values: (Tooth 17 B, Tooth 16 B, Tooth 15 B, Tooth 14 B, Tooth 24 B, Tooth 25 B, Tooth 26 B)<br><br> ---> Missing Integer Values: (Tooth 18 B, Tooth 18 P, Tooth 17 B, Tooth 17 P, Tooth 16 B, Tooth 16 P, Tooth 15 B, Tooth 15 P, Tooth 14 B, Tooth 14 P, Tooth 13 B, Tooth 13 P, Tooth 12 B, Tooth 12 P, Tooth 11 B, Tooth 11 P, Tooth 21 B, Tooth 21 P, Tooth 22 B, Tooth 22 P, Tooth 23 B, Tooth 23 P, Tooth 24 B, Tooth 24 P, Tooth 25 B, Tooth 25 P, Tooth 26 B, Tooth 26 P, Tooth 27 B, Tooth 27 P, Tooth 28 B, Tooth 28 P)<br><br> ---> Missing Integer Values: (Tooth 18 B, Tooth 18 P, Tooth 17 B, Tooth 17 P, Tooth 16 B, Tooth 16 P, Tooth 15 B, Tooth 15 P, Tooth 14 B, Tooth 14 P, Tooth 13 B, Tooth 13 P, Tooth 12 B, Tooth 11 P, Tooth 21 P, Tooth 22 B, Tooth 22 P, Tooth 23 B, Tooth 23 P, Tooth 24 B, Tooth 24 P, Tooth 25 B, Tooth 25 P, Tooth 26 B, Tooth 26 P, Tooth 27 B, Tooth 27 P, Tooth 28 B, Tooth 28 P)<br></td>
+    </tr>
+    <tr>
+      <td>8</td>
+      <td>2015-07-15 - Missing: (Tooth 18 B, Tooth 18 P, Tooth 28 B, Tooth 28 P)<br> ---> Missing Integer Values: (Tooth 17 B, Tooth 17 P, Tooth 16 B, Tooth 16 P, Tooth 15 B, Tooth 15 P, Tooth 14 B, Tooth 14 P, Tooth 13 B, Tooth 13 P, Tooth 12 B, Tooth 12 P, Tooth 11 B, Tooth 11 P, Tooth 21 B, Tooth 21 P, Tooth 22 B, Tooth 22 P, Tooth 23 B, Tooth 23 P, Tooth 24 B, Tooth 24 P, Tooth 25 B, Tooth 25 P, Tooth 26 B, Tooth 26 P, Tooth 27 B, Tooth 27 P)<br></td>
+    </tr>
+    <tr>
+      <td>10</td>
+      <td>2021-12-21 - Missing: (Tooth 18 B, Tooth 18 P, Tooth 14 B, Tooth 14 P, Tooth 24 B, Tooth 24 P, Tooth 28 B, Tooth 28 P)<br> ---> Missing Integer Values: (Tooth 17 P, Tooth 16 P, Tooth 15 P, Tooth 13 P, Tooth 12 P, Tooth 11 P, Tooth 21 P, Tooth 22 P, Tooth 23 P, Tooth 25 P, Tooth 26 P, Tooth 27 P)<br></td>
+    </tr>
+    <tr>
+      <td>11</td>
+      <td>2009-12-15 - Missing: (Tooth 18 B, Tooth 18 P, Tooth 17 P, Tooth 16 P, Tooth 15 B, Tooth 15 P, Tooth 14 P, Tooth 13 B, Tooth 13 P, Tooth 12 B, Tooth 12 P, Tooth 11 B, Tooth 11 P, Tooth 21 B, Tooth 21 P, Tooth 22 P, Tooth 23 P, Tooth 24 P, Tooth 25 P, Tooth 26 P, Tooth 27 P, Tooth 28 B, Tooth 28 P)<br> ---> Missing Integer Values: (Tooth 17 B, Tooth 16 B, Tooth 14 B, Tooth 22 B, Tooth 23 B, Tooth 24 B, Tooth 25 B, Tooth 26 B, Tooth 27 B)<br><br>2014-12-15 - Missing: (Tooth 18 B, Tooth 18 P, Tooth 24 B, Tooth 24 P, Tooth 28 B, Tooth 28 P)<br> ---> Missing Integer Values: (Tooth 17 B, Tooth 17 P, Tooth 16 B, Tooth 16 P, Tooth 15 B, Tooth 15 P, Tooth 14 B, Tooth 14 P, Tooth 13 B, Tooth 13 P, Tooth 12 B, Tooth 12 P, Tooth 11 B, Tooth 11 P, Tooth 21 B, Tooth 21 P, Tooth 22 B, Tooth 22 P, Tooth 23 B, Tooth 23 P, Tooth 25 B, Tooth 25 P, Tooth 26 B, Tooth 26 P, Tooth 27 B, Tooth 27 P)<br></td>
+    </tr>
+    <tr>
+      <td>13</td>
+      <td>2015-09-09 - Missing: (Tooth 18 B, Tooth 18 P, Tooth 17 B, Tooth 15 P, Tooth 14 P, Tooth 13 B, Tooth 13 P, Tooth 12 B, Tooth 12 P, Tooth 11 B, Tooth 11 P, Tooth 21 B, Tooth 21 P, Tooth 22 B, Tooth 22 P, Tooth 23 B, Tooth 23 P, Tooth 24 B, Tooth 24 P, Tooth 25 B, Tooth 25 P, Tooth 28 B, Tooth 28 P)<br> ---> Missing Integer Values: (Tooth 17 P, Tooth 16 B, Tooth 16 P, Tooth 15 B, Tooth 14 B, Tooth 26 B, Tooth 26 P, Tooth 27 B, Tooth 27 P)<br></td>
+    </tr>
+    <tr>
+      <td>18</td>
+      <td>---> Missing Integer Values: (Tooth 18 B, Tooth 18 P, Tooth 17 B, Tooth 17 P, Tooth 16 B, Tooth 16 P, Tooth 15 B, Tooth 15 P, Tooth 14 B, Tooth 14 P, Tooth 13 B, Tooth 13 P, Tooth 12 B, Tooth 12 P, Tooth 11 P, Tooth 21 P, Tooth 22 B, Tooth 22 P, Tooth 23 B, Tooth 23 P, Tooth 24 B, Tooth 24 P, Tooth 25 B, Tooth 25 P, Tooth 26 B, Tooth 26 P, Tooth 27 B, Tooth 27 P, Tooth 28 B, Tooth 28 P)<br></td>
+    </tr>
+    <tr>
+      <td>22</td>
+      <td>2007-04-11 - Missing: (Tooth 18 B, Tooth 18 P, Tooth 17 B, Tooth 17 P, Tooth 15 B, Tooth 15 P, Tooth 14 B, Tooth 14 P, Tooth 13 B, Tooth 13 P, Tooth 12 B, Tooth 12 P, Tooth 11 B, Tooth 11 P, Tooth 21 B, Tooth 21 P, Tooth 22 B, Tooth 22 P, Tooth 23 B, Tooth 23 P, Tooth 24 B, Tooth 24 P, Tooth 25 B, Tooth 25 P, Tooth 27 B, Tooth 28 B, Tooth 28 P)<br> ---> Missing Integer Values: (Tooth 16 B, Tooth 16 P, Tooth 26 B, Tooth 26 P, Tooth 27 P)<br><br>2008-03-07 - Missing: (Tooth 18 B, Tooth 18 P, Tooth 17 B, Tooth 17 P, Tooth 15 B, Tooth 15 P, Tooth 14 B, Tooth 14 P, Tooth 13 B, Tooth 13 P, Tooth 12 B, Tooth 12 P, Tooth 11 B, Tooth 11 P, Tooth 21 B, Tooth 21 P, Tooth 22 B, Tooth 22 P, Tooth 23 P, Tooth 24 B, Tooth 24 P, Tooth 25 B, Tooth 25 P, Tooth 27 B, Tooth 27 P, Tooth 28 B, Tooth 28 P)<br> ---> Missing Integer Values: (Tooth 16 B, Tooth 16 P, Tooth 23 B, Tooth 26 B, Tooth 26 P)<br></td>
+    </tr>
+    <tr>
+      <td>23</td>
+      <td>2020-09-30 - Missing: (Tooth 18 B, Tooth 18 P, Tooth 16 B, Tooth 16 P, Tooth 15 B, Tooth 15 P, Tooth 14 B, Tooth 14 P, Tooth 11 B, Tooth 11 P, Tooth 21 P, Tooth 22 B, Tooth 22 P, Tooth 23 P, Tooth 24 B, Tooth 24 P, Tooth 25 B, Tooth 25 P, Tooth 26 B, Tooth 26 P, Tooth 27 P, Tooth 28 B, Tooth 28 P)<br> ---> Missing Integer Values: (Tooth 12 B, Tooth 12 P, Tooth 21 B, Tooth 23 B)<br><br>2022-10-07 - Missing: (Tooth 18 B, Tooth 18 P, Tooth 16 B, Tooth 16 P, Tooth 15 B, Tooth 15 P, Tooth 14 B, Tooth 14 P, Tooth 13 P, Tooth 12 P, Tooth 11 B, Tooth 11 P, Tooth 21 P, Tooth 22 B, Tooth 22 P, Tooth 23 P, Tooth 24 B, Tooth 24 P, Tooth 25 B, Tooth 25 P, Tooth 26 B, Tooth 26 P, Tooth 28 B, Tooth 28 P)<br> ---> Missing Integer Values: (Tooth 12 B, Tooth 27 P)<br></td>
+    </tr>
+    <tr>
+      <td>24</td>
+      <td>2016-06-30 - Missing: (Tooth 18 B, Tooth 18 P, Tooth 28 B, Tooth 28 P)<br> ---> Missing Integer Values: (Tooth 17 P, Tooth 24 B, Tooth 25 B)<br><br>2019-06-20 - Missing: (Tooth 18 B, Tooth 18 P, Tooth 28 B, Tooth 28 P)<br> ---> Missing Integer Values: (Tooth 17 B, Tooth 17 P, Tooth 15 P, Tooth 14 P, Tooth 13 B, Tooth 13 P, Tooth 12 B, Tooth 12 P, Tooth 11 B, Tooth 11 P, Tooth 21 B, Tooth 21 P, Tooth 22 B, Tooth 22 P, Tooth 23 B, Tooth 23 P, Tooth 24 B, Tooth 24 P, Tooth 25 B, Tooth 25 P, Tooth 26 B, Tooth 26 P)<br></td>
+    </tr>
+    <tr>
+      <td>25</td>
+      <td>2021-11-09 - Missing: (Tooth 18 B, Tooth 18 P, Tooth 27 B, Tooth 27 P, Tooth 28 B, Tooth 28 P)<br> ---> Missing Integer Values: (Tooth 17 P, Tooth 24 P, Tooth 25 P)<br></td>
+    </tr>
+    <tr>
+      <td>26</td>
+      <td>2016-10-27 - Missing: (Tooth 18 B, Tooth 18 P, Tooth 17 B, Tooth 17 P, Tooth 15 P, Tooth 14 P, Tooth 13 P, Tooth 12 P, Tooth 11 B, Tooth 11 P, Tooth 21 B, Tooth 21 P, Tooth 22 B, Tooth 22 P, Tooth 23 P, Tooth 24 P, Tooth 25 B, Tooth 25 P, Tooth 26 P, Tooth 27 P, Tooth 28 B, Tooth 28 P)<br> ---> Missing Integer Values: (Tooth 16 P, Tooth 15 B, Tooth 14 B, Tooth 23 B, Tooth 24 B)<br><br>2017-07-20 - Missing: (Tooth 18 B, Tooth 18 P, Tooth 15 P, Tooth 14 P, Tooth 13 P, Tooth 12 B, Tooth 12 P, Tooth 11 B, Tooth 11 P, Tooth 21 P, Tooth 22 P, Tooth 23 P, Tooth 24 B, Tooth 24 P, Tooth 25 B, Tooth 25 P, Tooth 28 B, Tooth 28 P)<br> ---> Missing Integer Values: (Tooth 17 B, Tooth 17 P, Tooth 16 B, Tooth 16 P, Tooth 15 B, Tooth 14 B, Tooth 13 B, Tooth 21 B, Tooth 22 B, Tooth 23 B, Tooth 26 P, Tooth 27 P)<br><br>2018-08-21 - Missing: (Tooth 18 B, Tooth 18 P, Tooth 15 P, Tooth 14 P, Tooth 13 P, Tooth 12 B, Tooth 12 P, Tooth 11 B, Tooth 11 P, Tooth 21 B, Tooth 21 P, Tooth 22 B, Tooth 22 P, Tooth 23 P, Tooth 28 B, Tooth 28 P)<br> ---> Missing Integer Values: (Tooth 17 B, Tooth 16 B, Tooth 16 P, Tooth 15 B, Tooth 14 B, Tooth 13 B, Tooth 23 B, Tooth 24 B, Tooth 24 P, Tooth 25 B, Tooth 25 P)<br></td>
+    </tr>
+    <tr>
+      <td>31</td>
+      <td>2019-03-11 - Missing: (Tooth 18 B, Tooth 18 P, Tooth 17 B, Tooth 17 P, Tooth 16 P, Tooth 15 B, Tooth 15 P, Tooth 14 P, Tooth 13 B, Tooth 13 P, Tooth 12 B, Tooth 12 P, Tooth 11 B, Tooth 11 P, Tooth 21 B, Tooth 21 P, Tooth 22 B, Tooth 22 P, Tooth 23 B, Tooth 23 P, Tooth 24 P, Tooth 25 B, Tooth 25 P, Tooth 26 P, Tooth 27 B, Tooth 27 P, Tooth 28 B, Tooth 28 P)<br> ---> Missing Integer Values: (Tooth 16 B, Tooth 14 B, Tooth 24 B, Tooth 26 B)<br><br>2019-09-12 - Missing: (Tooth 18 B, Tooth 18 P, Tooth 17 B, Tooth 17 P, Tooth 16 B, Tooth 16 P, Tooth 15 B, Tooth 15 P, Tooth 14 B, Tooth 14 P, Tooth 13 B, Tooth 13 P, Tooth 12 B, Tooth 12 P, Tooth 11 B, Tooth 11 P, Tooth 21 B, Tooth 21 P, Tooth 22 B, Tooth 22 P, Tooth 23 B, Tooth 23 P, Tooth 24 B, Tooth 24 P, Tooth 25 B, Tooth 25 P, Tooth 26 P, Tooth 27 B, Tooth 27 P, Tooth 28 B, Tooth 28 P)<br> ---> Missing Integer Values: (Tooth 26 B)<br><br>2020-01-27 - Missing: (Tooth 18 B, Tooth 18 P, Tooth 17 B, Tooth 17 P, Tooth 16 B, Tooth 16 P, Tooth 15 B, Tooth 15 P, Tooth 14 B, Tooth 14 P, Tooth 13 B, Tooth 13 P, Tooth 12 B, Tooth 12 P, Tooth 11 B, Tooth 11 P, Tooth 21 B, Tooth 21 P, Tooth 22 B, Tooth 22 P, Tooth 23 B, Tooth 23 P, Tooth 28 B, Tooth 28 P)<br> ---> Missing Integer Values: (Tooth 24 B, Tooth 24 P, Tooth 25 P)<br></td>
+    </tr>
+    <tr>
+      <td>33</td>
+      <td>2012-04-19 - Missing: (Tooth 18 B, Tooth 18 P, Tooth 17 B, Tooth 17 P, Tooth 16 B, Tooth 16 P, Tooth 15 B, Tooth 15 P, Tooth 14 B, Tooth 14 P, Tooth 13 B, Tooth 13 P, Tooth 12 B, Tooth 12 P, Tooth 11 B, Tooth 11 P, Tooth 21 B, Tooth 21 P, Tooth 22 B, Tooth 22 P, Tooth 23 P, Tooth 24 B, Tooth 24 P, Tooth 25 B, Tooth 25 P, Tooth 26 B, Tooth 26 P, Tooth 27 B, Tooth 27 P, Tooth 28 B, Tooth 28 P)<br> ---> Missing Integer Values: (Tooth 23 B)<br><br> ---> Missing Integer Values: (Tooth 18 B, Tooth 18 P, Tooth 17 B, Tooth 17 P, Tooth 16 B, Tooth 16 P, Tooth 15 B, Tooth 15 P, Tooth 14 B, Tooth 14 P, Tooth 13 B, Tooth 13 P, Tooth 12 B, Tooth 12 P, Tooth 11 B, Tooth 11 P, Tooth 21 B, Tooth 21 P, Tooth 22 B, Tooth 22 P, Tooth 23 B, Tooth 23 P, Tooth 24 B, Tooth 24 P, Tooth 25 B, Tooth 25 P, Tooth 26 B, Tooth 26 P, Tooth 27 B, Tooth 27 P, Tooth 28 B, Tooth 28 P)<br><br> ---> Missing Integer Values: (Tooth 18 B, Tooth 18 P, Tooth 17 B, Tooth 17 P, Tooth 16 B, Tooth 16 P, Tooth 15 B, Tooth 15 P, Tooth 14 B, Tooth 14 P, Tooth 13 B, Tooth 13 P, Tooth 12 B, Tooth 12 P, Tooth 11 B, Tooth 11 P, Tooth 21 B, Tooth 21 P, Tooth 22 B, Tooth 22 P, Tooth 23 B, Tooth 23 P, Tooth 24 B, Tooth 24 P, Tooth 25 B, Tooth 25 P, Tooth 26 B, Tooth 26 P, Tooth 27 B, Tooth 27 P, Tooth 28 B, Tooth 28 P)<br></td>
+    </tr>
+    <tr>
+      <td>34</td>
+      <td>2007-07-17 - Missing: (Tooth 18 B, Tooth 18 P, Tooth 17 B, Tooth 17 P, Tooth 16 B, Tooth 16 P, Tooth 15 B, Tooth 15 P, Tooth 14 B, Tooth 14 P, Tooth 13 B, Tooth 13 P, Tooth 12 B, Tooth 12 P, Tooth 11 P, Tooth 21 P, Tooth 22 P, Tooth 23 B, Tooth 23 P, Tooth 24 B, Tooth 24 P, Tooth 25 B, Tooth 25 P, Tooth 26 B, Tooth 26 P, Tooth 27 B, Tooth 27 P, Tooth 28 B, Tooth 28 P)<br> ---> Missing Integer Values: (Tooth 11 B, Tooth 21 B, Tooth 22 B)<br></td>
+    </tr>
+    <tr>
+      <td>35</td>
+      <td>2018-05-02 - Missing: (Tooth 18 B, Tooth 18 P, Tooth 15 B, Tooth 15 P, Tooth 28 B, Tooth 28 P)<br> ---> Missing Integer Values: (Tooth 17 B, Tooth 17 P, Tooth 16 B, Tooth 16 P, Tooth 14 B, Tooth 14 P, Tooth 13 B, Tooth 13 P, Tooth 12 B, Tooth 12 P, Tooth 11 B, Tooth 11 P, Tooth 21 B, Tooth 21 P, Tooth 22 B, Tooth 22 P, Tooth 23 B, Tooth 23 P, Tooth 24 B, Tooth 24 P, Tooth 25 B, Tooth 25 P, Tooth 26 B, Tooth 26 P, Tooth 27 B, Tooth 27 P)<br></td>
+    </tr>
+    <tr>
+      <td>37</td>
+      <td>2014-09-04 - Missing: (Tooth 18 B, Tooth 18 P, Tooth 27 B, Tooth 27 P, Tooth 28 B, Tooth 28 P)<br> ---> Missing Integer Values: (Tooth 17 B, Tooth 17 P, Tooth 16 B, Tooth 16 P, Tooth 15 B, Tooth 15 P, Tooth 14 B, Tooth 14 P, Tooth 13 B, Tooth 13 P, Tooth 12 B, Tooth 12 P, Tooth 11 P, Tooth 21 P, Tooth 22 P, Tooth 23 B, Tooth 23 P, Tooth 24 B, Tooth 24 P, Tooth 25 B, Tooth 25 P, Tooth 26 P)<br></td>
+    </tr>
+    <tr>
+      <td>39</td>
+      <td>2015-12-08 - Missing: (Tooth 18 B, Tooth 18 P, Tooth 28 B, Tooth 28 P)<br> ---> Missing Integer Values: (Tooth 17 B, Tooth 17 P, Tooth 16 B, Tooth 16 P, Tooth 15 B, Tooth 15 P, Tooth 14 B, Tooth 14 P, Tooth 13 B, Tooth 13 P, Tooth 12 B, Tooth 12 P, Tooth 11 B, Tooth 11 P, Tooth 21 B, Tooth 21 P, Tooth 22 B, Tooth 22 P, Tooth 23 B, Tooth 23 P, Tooth 24 B, Tooth 24 P, Tooth 25 B, Tooth 25 P, Tooth 26 B, Tooth 26 P, Tooth 27 B, Tooth 27 P)<br></td>
+    </tr>
+    <tr>
+      <td>40</td>
+      <td>2020-11-04 - Missing: (Tooth 18 B, Tooth 18 P, Tooth 17 B, Tooth 17 P, Tooth 16 P, Tooth 15 B, Tooth 15 P, Tooth 14 B, Tooth 14 P, Tooth 13 B, Tooth 13 P, Tooth 12 B, Tooth 12 P, Tooth 11 B, Tooth 11 P, Tooth 21 B, Tooth 21 P, Tooth 22 B, Tooth 22 P, Tooth 23 B, Tooth 23 P, Tooth 24 P, Tooth 25 B, Tooth 25 P, Tooth 26 P, Tooth 27 B, Tooth 27 P, Tooth 28 B, Tooth 28 P)<br> ---> Missing Integer Values: (Tooth 16 B, Tooth 24 B, Tooth 26 B)<br></td>
+    </tr>
+    <tr>
+      <td>41</td>
+      <td>2015-11-05 - Missing: (Tooth 18 B, Tooth 18 P, Tooth 17 B, Tooth 17 P, Tooth 16 P, Tooth 15 B, Tooth 15 P, Tooth 14 B, Tooth 14 P, Tooth 13 B, Tooth 13 P, Tooth 12 B, Tooth 12 P, Tooth 11 P, Tooth 21 B, Tooth 21 P, Tooth 22 B, Tooth 22 P, Tooth 23 B, Tooth 23 P, Tooth 24 B, Tooth 24 P, Tooth 25 B, Tooth 25 P, Tooth 26 B, Tooth 27 B, Tooth 28 B, Tooth 28 P)<br> ---> Missing Integer Values: (Tooth 16 B, Tooth 11 B, Tooth 26 P, Tooth 27 P)<br><br>2017-11-29 - Missing: (Tooth 18 B, Tooth 18 P, Tooth 17 B, Tooth 17 P, Tooth 28 B, Tooth 28 P)<br> ---> Missing Integer Values: (Tooth 26 B)<br><br>2018-01-10 - Missing: (Tooth 18 B, Tooth 18 P, Tooth 17 B, Tooth 17 P, Tooth 15 P, Tooth 14 P, Tooth 13 P, Tooth 12 P, Tooth 28 B, Tooth 28 P)<br> ---> Missing Integer Values: (Tooth 16 B, Tooth 14 B, Tooth 13 B, Tooth 12 B, Tooth 11 B, Tooth 21 P, Tooth 23 B, Tooth 23 P, Tooth 24 B, Tooth 24 P, Tooth 25 B, Tooth 27 B, Tooth 27 P)<br></td>
+    </tr>
+    <tr>
+      <td>45</td>
+      <td>2012-09-18 - Missing: (Tooth 18 B, Tooth 18 P, Tooth 28 B, Tooth 28 P)<br> ---> Missing Integer Values: (Tooth 17 B, Tooth 17 P, Tooth 16 B, Tooth 16 P, Tooth 15 B, Tooth 15 P, Tooth 14 B, Tooth 14 P, Tooth 13 B, Tooth 13 P, Tooth 12 B, Tooth 12 P, Tooth 11 B, Tooth 11 P, Tooth 21 B, Tooth 21 P, Tooth 22 B, Tooth 22 P, Tooth 23 B, Tooth 23 P, Tooth 24 B, Tooth 24 P, Tooth 25 B, Tooth 25 P, Tooth 26 B, Tooth 26 P, Tooth 27 B, Tooth 27 P)<br><br>2013-01-07 - Missing: (Tooth 18 B, Tooth 18 P, Tooth 28 B, Tooth 28 P)<br> ---> Missing Integer Values: (Tooth 17 P, Tooth 16 B, Tooth 16 P, Tooth 15 B, Tooth 15 P, Tooth 14 B, Tooth 14 P, Tooth 13 B, Tooth 13 P, Tooth 12 B, Tooth 12 P, Tooth 11 B, Tooth 11 P, Tooth 21 B, Tooth 21 P, Tooth 22 B, Tooth 22 P, Tooth 23 B, Tooth 23 P, Tooth 24 B, Tooth 24 P, Tooth 25 B, Tooth 25 P, Tooth 26 B, Tooth 26 P, Tooth 27 B, Tooth 27 P)<br><br>2017-10-25 - Missing: (Tooth 18 B, Tooth 18 P, Tooth 28 B, Tooth 28 P)<br> ---> Missing Integer Values: (Tooth 17 P, Tooth 16 B, Tooth 16 P, Tooth 15 B, Tooth 15 P, Tooth 14 B, Tooth 14 P, Tooth 13 B, Tooth 13 P, Tooth 12 B, Tooth 12 P, Tooth 11 B, Tooth 11 P, Tooth 21 B, Tooth 21 P, Tooth 22 B, Tooth 22 P, Tooth 23 B, Tooth 23 P, Tooth 24 B, Tooth 24 P, Tooth 25 B, Tooth 25 P, Tooth 26 B, Tooth 26 P, Tooth 27 B, Tooth 27 P)<br></td>
+    </tr>
+    <tr>
+      <td>48</td>
+      <td>2018-05-28 - Missing: (Tooth 18 B, Tooth 18 P, Tooth 16 P, Tooth 15 P, Tooth 14 P, Tooth 13 P, Tooth 12 B, Tooth 12 P, Tooth 11 B, Tooth 11 P, Tooth 21 P, Tooth 22 P, Tooth 23 P, Tooth 24 P, Tooth 25 P, Tooth 26 P, Tooth 27 B, Tooth 28 B, Tooth 28 P)<br> ---> Missing Integer Values: (Tooth 17 P, Tooth 27 P)<br><br>2018-09-07 - Missing: (Tooth 18 B, Tooth 18 P, Tooth 17 B, Tooth 17 P, Tooth 16 B, Tooth 16 P, Tooth 15 B, Tooth 15 P, Tooth 14 B, Tooth 14 P, Tooth 13 B, Tooth 13 P, Tooth 11 P, Tooth 21 P, Tooth 23 B, Tooth 23 P, Tooth 24 B, Tooth 25 B, Tooth 25 P, Tooth 26 P, Tooth 27 P, Tooth 28 B, Tooth 28 P)<br> ---> Missing Integer Values: (Tooth 12 B, Tooth 12 P, Tooth 11 B, Tooth 22 B, Tooth 22 P, Tooth 24 P, Tooth 26 B, Tooth 27 B)<br><br>2021-04-21 - Missing: (Tooth 18 B, Tooth 18 P, Tooth 17 P, Tooth 16 P, Tooth 15 P, Tooth 14 P, Tooth 13 P, Tooth 12 B, Tooth 12 P, Tooth 11 B, Tooth 11 P, Tooth 21 P, Tooth 22 P, Tooth 23 P, Tooth 24 P, Tooth 25 P, Tooth 26 P, Tooth 27 P, Tooth 28 B, Tooth 28 P)<br> ---> Missing Integer Values: (Tooth 16 B, Tooth 15 B, Tooth 14 B, Tooth 13 B, Tooth 21 B, Tooth 22 B, Tooth 23 B, Tooth 24 B, Tooth 25 B)<br></td>
+    </tr>
+    <tr>
+      <td>49</td>
+      <td>2012-10-10 - Missing: (Tooth 18 B, Tooth 18 P, Tooth 17 P, Tooth 15 P, Tooth 14 P, Tooth 13 P, Tooth 12 P, Tooth 11 P, Tooth 21 P, Tooth 22 P, Tooth 23 P, Tooth 24 P, Tooth 25 P, Tooth 27 B, Tooth 27 P, Tooth 28 B, Tooth 28 P)<br> ---> Missing Integer Values: (Tooth 13 B, Tooth 11 B, Tooth 21 B, Tooth 26 P)<br></td>
+    </tr>
+  </tbody>
+</table></div><br><div class='container'><h2>Datatype 5: Inconsistent Missing Data</h2><p>Records with inconsistent missing data patterns across visits.</p><table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th>ResearchID</th>
+      <th>Reported Issues</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>15</td>
+      <td>2016-08-18 - Missing: (Tooth 18 B, Tooth 18 P, Tooth 17 B, Tooth 17 P, Tooth 16 P, Tooth 15 B, Tooth 15 P, Tooth 14 P, Tooth 13 B, Tooth 13 P, Tooth 12 B, Tooth 12 P, Tooth 11 B, Tooth 11 P, Tooth 21 B, Tooth 21 P, Tooth 22 B, Tooth 22 P, Tooth 23 B, Tooth 23 P, Tooth 24 B, Tooth 24 P, Tooth 25 B, Tooth 25 P, Tooth 26 B, Tooth 26 P, Tooth 27 B, Tooth 27 P, Tooth 28 B, Tooth 28 P)<br>2016-09-20 - Missing: (Tooth 18 B, Tooth 18 P, Tooth 28 B, Tooth 28 P)</td>
+    </tr>
+    <tr>
+      <td>28</td>
+      <td>2013-10-24 - Missing: (Tooth 16 B, Tooth 16 P, Tooth 15 B, Tooth 15 P, Tooth 24 B, Tooth 24 P)<br>2016-10-27 - Missing: (Tooth 18 B, Tooth 18 P, Tooth 17 B, Tooth 17 P, Tooth 16 B, Tooth 16 P, Tooth 15 B, Tooth 15 P, Tooth 14 P, Tooth 13 B, Tooth 13 P, Tooth 12 B, Tooth 12 P, Tooth 11 B, Tooth 11 P, Tooth 21 B, Tooth 21 P, Tooth 22 B, Tooth 22 P, Tooth 23 P, Tooth 24 B, Tooth 24 P, Tooth 25 P, Tooth 26 P, Tooth 27 B, Tooth 27 P, Tooth 28 B, Tooth 28 P)<br>2017-09-27 - Missing: (Tooth 18 B, Tooth 18 P, Tooth 17 P, Tooth 16 B, Tooth 16 P, Tooth 15 B, Tooth 15 P, Tooth 14 P, Tooth 13 B, Tooth 13 P, Tooth 12 B, Tooth 12 P, Tooth 11 B, Tooth 11 P, Tooth 21 B, Tooth 21 P, Tooth 22 P, Tooth 23 P, Tooth 24 B, Tooth 24 P, Tooth 25 P, Tooth 26 P, Tooth 27 B, Tooth 27 P, Tooth 28 B, Tooth 28 P)<br>2018-04-17 - Missing: (Tooth 18 B, Tooth 18 P, Tooth 17 P, Tooth 16 B, Tooth 16 P, Tooth 15 B, Tooth 15 P, Tooth 14 P, Tooth 13 B, Tooth 13 P, Tooth 12 B, Tooth 12 P, Tooth 11 B, Tooth 11 P, Tooth 21 B, Tooth 21 P, Tooth 22 P, Tooth 23 P, Tooth 24 B, Tooth 24 P, Tooth 25 P, Tooth 27 B, Tooth 27 P, Tooth 28 B, Tooth 28 P)</td>
+    </tr>
+  </tbody>
+</table></div><br><div class='container'><h2>Datatype 6: Other Data (Remaining)</h2><p>Records requiring further investigation due to unique data patterns.</p><table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+    </tr>
+  </thead>
+  <tbody>
+  </tbody>
+</table></div><br></body></html>
