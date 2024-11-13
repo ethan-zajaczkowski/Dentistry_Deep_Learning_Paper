@@ -2,6 +2,7 @@ import pandas as pd
 import subprocess
 import numpy as np
 import re
+import pickle
 
 ### --- Loading Excel files --- ###
 demographic_data = pd.read_excel('Data/DemographicData_snapshot.xlsx')
@@ -264,3 +265,26 @@ try:
     print(f"HTML file created and opened in Safari: {html_file_path}")
 except Exception as e:
     print(f"Could not open Safari. Error: {e}")
+
+# Creating a pickel file for cross-validation use.
+
+# Add a Data_Type column to each subset
+no_missing_data["Data_Type"] = "No Missing Data"
+systematic_missing_data["Data_Type"] = "Systematic Missing Data"
+consistent_missing_data["Data_Type"] = "Consistent Missing Data"
+inconsistent_missing_data["Data_Type"] = "Inconsistent Missing Data"
+single_observation_data["Data_Type"] = "Single Observation Data"
+remaining_data["Data_Type"] = "Other (Remaining Data)"
+
+# Concatenate all subsets into one DataFrame
+pickle_df = pd.concat([no_missing_data, 
+                       systematic_missing_data, 
+                       consistent_missing_data, 
+                       inconsistent_missing_data, 
+                       single_observation_data, 
+                       remaining_data], 
+                      ignore_index=True)
+
+# Save the concatenated DataFrame as a pickle file
+with open("Data_PKL/pockets_snapshots.pkl", "wb") as f:
+    pickle.dump(pickle_df, f)

@@ -1,6 +1,7 @@
 import pandas as pd
 import subprocess
 import numpy as np
+import pickle
 import re
 
 ### --- Loading Excel files --- ###
@@ -126,7 +127,7 @@ inconsistent_missing_summary = create_summary_df(inconsistent_missing_data, colu
 remaining_summary = create_summary_df(remaining_data, column_range)
 
 # HTML Report Writing with Custom Style
-html_file_path = "recessions_snapshots.html"
+html_file_path = "Data Reports HTML/recessions_snapshots.html"
 with open(html_file_path, "w") as file:
     file.write("""
     <html>
@@ -179,3 +180,24 @@ try:
     print(f"HTML file created and opened in Safari: {html_file_path}")
 except Exception as e:
     print(f"Could not open Safari. Error: {e}")
+
+# Add a Data_Type column to each subset
+no_missing_data["Data_Type"] = "No Missing Data"
+systematic_missing_data["Data_Type"] = "Systematic Missing Data"
+consistent_missing_data["Data_Type"] = "Consistent Missing Data"
+inconsistent_missing_data["Data_Type"] = "Inconsistent Missing Data"
+single_observation_data["Data_Type"] = "Single Observation Data"
+remaining_data["Data_Type"] = "Other (Remaining Data)"
+
+# Concatenate all subsets into one DataFrame
+pickle_df = pd.concat([no_missing_data, 
+                       systematic_missing_data, 
+                       consistent_missing_data, 
+                       inconsistent_missing_data, 
+                       single_observation_data, 
+                       remaining_data], 
+                      ignore_index=True)
+
+# Save the concatenated DataFrame as a pickle file
+with open("Data_PKL/recessions_snapshots.pkl", "wb") as f:
+    pickle.dump(pickle_df, f)

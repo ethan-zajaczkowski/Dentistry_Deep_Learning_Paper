@@ -1,5 +1,6 @@
 import pandas as pd
 import subprocess
+import pickle
 
 # Loading Excel files
 demographic_data = pd.read_excel('Data/DemographicData_snapshot.xlsx')
@@ -52,11 +53,10 @@ else_grouped = (
 final_grouped = pd.merge(missing_grouped, else_grouped, on='ResearchID', how='outer')
 
 # Fill any NaN values in missing or other issues with appropriate placeholders
-final_grouped['Missing Issues'].fillna("No missing teeth", inplace=True)
-final_grouped['Other Issues'].fillna("No other issues", inplace=True)
+final_grouped.fillna({'Missing Issues': "No missing teeth", 'Other Issues': "No other issues"}, inplace=True)
 
 # Define the output HTML file path
-html_file_path = "missing_snapshots_summary.html"
+html_file_path = "Data Reports HTML/missing_snapshots_summary.html"
 
 # Open the file for writing
 with open(html_file_path, "w") as file:
@@ -131,3 +131,7 @@ try:
     print(f"HTML file created and opened in Safari: {html_file_path}")
 except Exception as e:
     print("Could not open Safari. Error:", e)
+
+# Saving data in pkl file for external use in Cross-Validation
+with open("Data_PKL/missing_snapshots.pkl", "wb") as f:
+    pickle.dump(final_grouped, f)
